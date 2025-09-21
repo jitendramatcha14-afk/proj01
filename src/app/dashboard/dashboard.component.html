@@ -1,0 +1,43 @@
+<div class="dashboard-container">
+  <div class="dashboard-widgets">
+    <div class="widget attendance-rate">
+      <h3>Attendance Rate</h3>
+      <div class="rate">{{ attendanceRate }}%</div>
+    </div>
+    <div class="widget absentees">
+      <h3>Absentees</h3>
+      <ul>
+        <li *ngFor="let a of absentees">{{ a.name }} ({{ a.class }}) - {{ a.date }}</li>
+      </ul>
+    </div>
+    <div class="widget approvals">
+      <h3>Pending Approvals</h3>
+      <ul>
+        <li *ngFor="let ap of approvals">{{ ap.name }} ({{ ap.class }}) - {{ ap.date }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="dashboard-tables">
+    <h3>Class Attendance</h3>
+    <div class="export-buttons">
+      <button (click)="downloadCSV()">Download CSV</button>
+      <button (click)="downloadPDF()">Download PDF</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Students</th>
+          <th>Present</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of classes">
+          <td>{{ c.name }}</td>
+          <td>{{ c.students }}</td>
+          <td>{{ c.present }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

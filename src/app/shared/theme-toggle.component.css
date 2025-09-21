@@ -1,0 +1,18 @@
+button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 1001;
+}
+button.dark-mode {
+  background: #333;
+  color: #fff;
+}

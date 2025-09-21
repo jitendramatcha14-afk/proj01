@@ -1,0 +1,15 @@
+<div class="attendance-form">
+  <h2>Mark Attendance</h2>
+  <form (ngSubmit)="markAttendance()" autocomplete="off">
+    <input type="text" [(ngModel)]="studentId" name="studentId" placeholder="Student ID" required />
+    <input type="text" [(ngModel)]="classId" name="classId" placeholder="Class ID" required />
+    <input type="date" [(ngModel)]="date" name="date" required />
+    <select [(ngModel)]="status" name="status" required>
+      <option value="">Select Status</option>
+      <option value="present">Present</option>
+      <option value="absent">Absent</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<app-notification></app-notification>

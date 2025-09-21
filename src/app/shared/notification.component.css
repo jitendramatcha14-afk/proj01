@@ -1,0 +1,21 @@
+.notification {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+.notification.success {
+  background: #43a047;
+}
+.notification.error {
+  background: #e53935;
+}
+.notification.info {
+  background: #1976d2;
+}
