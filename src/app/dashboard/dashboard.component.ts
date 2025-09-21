@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  imports: [CommonModule]
 })
 export class DashboardComponent implements OnInit {
   private apiUrl = 'http://localhost:8080'; // Update with your deployed backend URL
@@ -48,5 +50,4 @@ export class DashboardComponent implements OnInit {
       window.URL.revokeObjectURL(url);
     });
   }
-}
 }

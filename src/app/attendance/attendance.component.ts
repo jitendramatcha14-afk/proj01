@@ -1,3 +1,6 @@
+import { NotificationComponent } from '../shared/notification.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { AttendanceService, AttendanceEntry } from '../services/attendance.service';
 import { NotificationService } from '../shared/notification.service';
@@ -5,7 +8,8 @@ import { NotificationService } from '../shared/notification.service';
 @Component({
   selector: 'app-attendance',
   templateUrl: './attendance.component.html',
-  styleUrls: ['./attendance.component.css']
+  styleUrls: ['./attendance.component.css'],
+  imports: [CommonModule, FormsModule, NotificationComponent]
 })
 export class AttendanceComponent {
   status: 'present' | 'absent' | '' = '';

@@ -1,3 +1,5 @@
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
 import { SocialLoginService } from './social-login.service';
@@ -5,7 +7,8 @@ import { SocialLoginService } from './social-login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  imports: [CommonModule, FormsModule]
 })
 export class LoginComponent {
   username = '';
@@ -29,10 +32,12 @@ export class LoginComponent {
   loginWithGoogle() {
     this.socialLoginService.signInWithGoogle();
     this.socialLoginService.user$.subscribe(user => {
-      if (user) {
+      if (user && user.email) {
         // You can map Google user to your app user model here
         this.authService.login(user.email, ''); // Or handle differently
         this.error = '';
+      } else {
+        this.error = 'Google login failed: No email found.';
       }
     });
   }

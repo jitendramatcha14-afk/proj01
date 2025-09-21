@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import {
   SocialAuthService,
   GoogleLoginProvider,
-  AppleLoginProvider,
   SocialUser
-} from 'angularx-social-login';
+} from '@abacritt/angularx-social-login';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -20,10 +19,6 @@ export class SocialLoginService {
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
-  signInWithApple(): void {
-    this.authService.signIn(AppleLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {
