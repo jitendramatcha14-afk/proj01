@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\r\n\r\nbody.dark-mode {\r\n\tbackground: #181818;\r\n\tcolor: #e0e0e0;\r\n}\r\nbody.dark-mode .dashboard-container,\r\nbody.dark-mode .attendance-form,\r\nbody.dark-mode .login-container,\r\nbody.dark-mode .widget,\r\nbody.dark-mode .notification {\r\n\tbackground: #232323 !important;\r\n\tcolor: #e0e0e0 !important;\r\n}\r\nbody.dark-mode table {\r\n\tbackground: #232323 !important;\r\n\tcolor: #e0e0e0 !important;\r\n}\r\nbody.dark-mode th {\r\n\tbackground: #222 !important;\r\n}\r\n"],
+  "mappings": ";AAEA,IAAI,CAAC;AACJ,cAAY;AACZ,SAAO;AACR;AACA,IAAI,CAJC,UAIU,CAAC;AAChB,IAAI,CALC,UAKU,CAAC;AAChB,IAAI,CANC,UAMU,CAAC;AAChB,IAAI,CAPC,UAOU,CAAC;AAChB,IAAI,CARC,UAQU,CAAC;AACf,cAAY;AACZ,SAAO;AACR;AACA,IAAI,CAZC,UAYU;AACd,cAAY;AACZ,SAAO;AACR;AACA,IAAI,CAhBC,UAgBU;AACd,cAAY;AACb;",
+  "names": []
+}
