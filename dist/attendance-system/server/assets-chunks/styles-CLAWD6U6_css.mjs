@@ -1,0 +1,2 @@
+export default `body.dark-mode{background:#181818;color:#e0e0e0}body.dark-mode .dashboard-container,body.dark-mode .attendance-form,body.dark-mode .login-container,body.dark-mode .widget,body.dark-mode .notification,body.dark-mode table{background:#232323!important;color:#e0e0e0!important}body.dark-mode th{background:#222!important}
+`;
